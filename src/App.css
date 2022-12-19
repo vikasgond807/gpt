@@ -1,0 +1,9 @@
+:root {
+  --primary-white: #effffd;
+
+  --primary-blue: #b8fff9;
+  --secondary-blue: #85f4ff;
+
+  --tertiary-blue: #42c2ff;
+}
+@import "~react-image-gallery/styles/css/image-gallery.css";

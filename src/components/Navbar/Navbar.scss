@@ -1,0 +1,143 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    background: #FFFFFF;
+    border: 1px solid rgba(255,255,255,0.4);
+    z-index: 2;
+}
+
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2rem;
+
+
+    img{
+        width:90%;
+        height:80%;
+    }
+}
+
+.navbar-links{
+    flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        list-style: none;
+    
+        li {
+            font-size:20px;
+            margin: 0 1rem;
+            cursor: pointer;
+    
+            flex-direction: column;
+        }
+    
+        a {
+            color:rgb(11, 11, 11);
+            text-decoration: none;
+            flex-direction: column;
+    
+            text-transform: uppercase;
+            font-weight: 500;
+    
+            transition: all 0.2s ease-in;
+    
+            &:hover {
+                color:#f70505;
+            }
+        }
+    
+        &:hover {
+            div {
+                background: var(--secondary-color);
+            }
+        }
+
+
+    @media screen and (width<=900px) {
+        display: none;
+        
+    }
+
+}
+
+.navbar-menu{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+
+    svg{
+        width: 80%;
+        height: 80%;
+    }
+
+    div{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+
+        padding: 1rem;
+        width: 40%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        background-color:white;
+        box-shadow: 0 0 20 rgba(255,255,255,0.65);
+
+        svg{
+            width: 40px;
+            height: 40px;
+            margin: 0.5rem 1rem;
+            
+        }
+
+        ul{
+            list-style:none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            flex-direction: column;
+
+            li {
+                    margin: 1rem;
+            
+                    a {
+                        color: var(--secondary-color);
+                        text-decoration: none;
+                        font-size: 1.25rem;
+                        text-transform: uppercase;
+                        font-weight: 500;
+            
+                        transition: all 0.5 ease-in-out;
+            
+            
+                        &:hover {
+                            color:red;
+                        }
+                    }
+                }
+        }
+
+    }
+}
